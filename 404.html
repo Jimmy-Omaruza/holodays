@@ -1,12 +1,18 @@
+<!-- 404.html -->
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Page Not Found</title>
-  <meta http-equiv="refresh" content="0; URL='/'" />
+  <script>
+    // 将所有的 404 请求重定向到主页
+    var path = window.location.pathname;
+    if (path !== '/' && !path.endsWith('.html')) {
+      window.location.href = '/holodays/';
+    }
+  </script>
 </head>
 <body>
-  <h1>404 - Page Not Found</h1>
-  <p>Redirecting...</p>
+  <h1>Page Not Found</h1>
+  <p>Sorry, the page you are looking for does not exist.</p>
 </body>
 </html>
